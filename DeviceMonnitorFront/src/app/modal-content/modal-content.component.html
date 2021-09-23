@@ -1,0 +1,120 @@
+<div class="container">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">{{guid}} - {{deviceName}}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="closeModal()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+
+      <form class="form" #form="ngForm" (ngSubmit)="onSubmit(form)">
+        <div class="form-group row">
+          <div class="col-sm-6">
+            <label for="umax">Кучланиншнинг максимал киймати 385-450 (В)</label>
+            <input type="number" class="form-control" id="umax" placeholder="385-450" value={{deviceConfig?.uMax}}
+              name="uMax" #uMax="ngModel" ngModel={{deviceConfig?.uMax}}>
+          </div>
+          <div class="col-sm-6">
+            <label for="umin">Кучланишнинг минимал киймати 330-375 (В)</label>
+            <input type="number" class="form-control" id="umin" placeholder="330-375" value={{deviceConfig?.uMin}}
+              name="uMin" #uMin="ngModel" ngModel={{deviceConfig?.uMin}}>
+          </div>
+        </div>
+        <div class="form-group row">
+          <!-- <div class="col-sm-6">
+            <label for="imax">Токнинг максимал киймати (А)</label>
+            <input type="number" class="form-control" id="imax" placeholder="1-5000,0"  value={{deviceConfig?.cup}} name="cup" #cup="ngModel" ngModel={{deviceConfig?.cup}}>
+          </div> -->
+          <div class="col-sm-6">
+            <label for="inom">Токнинг номинал киймати 3.0-200.0 (А)</label>
+            <input type="number" class="form-control" id="inom" placeholder="3,0-200,0" value={{deviceConfig?.calm}}
+              name="calm" #calm="ngModel" ngModel={{deviceConfig?.calm}}>
+          </div>
+        </div>
+        <!-- <div class="form-group row">
+          <div class="col-sm-6">
+            <label for="imin">Токнинг минимал киймати (А)</label>
+            <input type="number" class="form-control" id="imin" placeholder="1-4000,0" value={{deviceConfig?.cadw}} name="cadw" #cadw="ngModel" ngModel={{deviceConfig?.cadw}}>
+          </div>
+        </div>         -->
+        <div class="form-group row">
+          <div class="col-sm-6">
+            <label for="w_up">Сувнинг юкори сатхи 0-100 (%)</label>
+            <input type="number" class="form-control" id="w_up" placeholder="0-100" value={{deviceConfig?.wup}}
+              name="wup" #wup="ngModel" ngModel={{deviceConfig?.wup}}>
+          </div>
+          <div class="col-sm-6">
+            <label for="w_down">Сувнинг минимал сатхи 0-100 (%)</label>
+            <input type="number" class="form-control" id="w_down" placeholder="0-100" value={{deviceConfig?.wdw}}
+              name="wdw" #wl="ngModel" ngModel={{deviceConfig?.wdw}}>
+          </div>
+        </div>
+        <!-- <div class="form-group row">
+          <div class="col-sm-6">
+            <label for="sw_tim">Екиб учиришлар орасидаги вакт (мин)</label>
+            <input type="number" class="form-control" id="sw_time" placeholder="1-60" value={{deviceConfig?.ontime}} name="ontime" #ontime="ngModel" ngModel={{deviceConfig?.ontime}}>
+          </div>
+          <div class="col-sm-6">
+            <label for="sw_err">Хатоликда екиш учун оралик вакт (мин)</label>
+            <input type="number" class="form-control" id="sw_err" placeholder="0-60" value={{deviceConfig?.ertime}} name="ertime" #ertime="ngModel" ngModel={{deviceConfig?.ertime}}>
+          </div>
+        </div> -->
+        <div class="form-group row">
+          <div class="col-sm-6">
+            <label for="imax_sec">Ток максимал киймат вакти 1-999 (сек)</label>
+            <input type="number" class="form-control" id="imax_sec" placeholder="1-999" value={{deviceConfig?.overtime}}
+              name="overtime" #overtime="ngModel" ngModel={{deviceConfig?.overtime}}>
+          </div>
+          <div class="col-sm-6">
+            <label for="imin_sec">Токнинг минимал киймат вакти 1-999 (сек)</label>
+            <input type="number" class="form-control" id="imin_sec" placeholder="1-999" value={{deviceConfig?.downTime}}
+              name="downTime" #downTime="ngModel" ngModel={{deviceConfig?.downTime}}>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-6">
+            <label for="imax_sec">Кучланишнинг максимал вакти 1-999 (сек)</label>
+            <input type="number" class="form-control" id="imax_sec" placeholder="1-999"
+              value={{deviceConfig?.overVtime}} name="overVtime" #overVtime="ngModel"
+              ngModel={{deviceConfig?.overVtime}}>
+          </div>
+          <div class="col-sm-6">
+            <label for="imin_sec">Кучланишнинг минимал вакти 1-999 (сек)</label>
+            <input type="number" class="form-control" id="imin_sec" placeholder="1-999" value={{deviceConfig?.lowVtime}}
+              name="lowVtime" #lowVtime="ngModel" ngModel={{deviceConfig?.lowVtime}}>
+          </div>
+        </div>
+        <div class="form-group row check-boxes">
+          <div class="col-sm-3">
+            <input class="form-check-input" type="checkbox" [checked]="deviceConfig?.dO0" name="dO0" #dO0="ngModel" ngModel>
+            <label class="form-check-label" for="dO0">
+              DO0
+            </label>
+          </div>
+          <div class="col-sm-3">
+            <input class="form-check-input" type="checkbox" [checked]="deviceConfig?.dO1" name="dO1" #dO1="ngModel" ngModel>
+            <label class="form-check-label" for="dO1">
+              DO1
+            </label>
+          </div>
+          <div class="col-sm-3">
+            <input class="form-check-input" type="checkbox" [checked]="deviceConfig?.dO2" name="dO2" #dO2="ngModel" ngModel>
+            <label class="form-check-label" for="dO2">
+              DO2
+            </label>
+          </div>
+          <div class="col-sm-3">
+            <input class="form-check-input" type="checkbox" [checked]="deviceConfig?.dO3" name="dO3" #dO3="ngModel" ngModel>            
+            <label class="form-check-label" for="dO3">
+              DO3
+            </label>
+          </div>
+        </div>        
+        <div class="row d-flex align-items-center justify-content-center">
+          <button type="submit" class="btn btn-primary px-4 float-right">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

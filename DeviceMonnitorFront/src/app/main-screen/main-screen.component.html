@@ -1,0 +1,68 @@
+<nav class="bg-light m-2">
+  <div class="container">
+    <div class="row justify-content-end">
+      <h4 class="modal-title px-2" id="modal-basic-title">{{userName}}</h4>
+      <a class="btn btn-outline-dark float-right" (click)="logOut()"><i class="fa fa-sign-out"
+          aria-hidden="true"></i>Log out</a>
+    </div>
+  </div>
+</nav>
+
+<div class="row">
+  <div *ngFor="let device of devices">
+    <div class="card" [ngClass]="{'gray-bg':device.isActive==false}">
+      <div class="card-header">
+        <div class="row"><span>{{device.name}}</span><span *ngIf='compareDates(device.lastDataTime); then showDate '></span>&nbsp;&nbsp;&nbsp;&nbsp;<span
+            *ngIf="device.isWorking; then greenBlock else pinkBlock"></span> </div>
+            <ng-template #showDate>&nbsp;-&nbsp;{{(device.lastDataTime.toString()+'Z') | date:'yyyy-MM-dd HH:mm:ss'  }}</ng-template>
+        <div class="row float-right">
+          <button class="btn btn-outline-success btn-sm conf-btn"
+            (click)="getConfig(device.deviceGuid, device.name)">Configure</button>&nbsp;&nbsp;
+          <button class="btn btn-outline-primary btn-sm conf-btn"
+            (click)="getArchive(device.deviceGuid, device.name)">Archive</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <nz-collapse>
+            <nz-collapse-panel *ngFor="let panel of panels.get(device.deviceGuid)" [nzHeader]="panel.name"
+              [nzActive]="panel.active" [nzDisabled]="panel.disabled" (click)="collapser(device.deviceGuid, panel.id)">
+              <p style="margin:0;">
+                <thead class="thead-light">
+                  <tr>
+                    <th style="width: 70%">Параметры</th>
+                    <!-- <th style="width: 15%">Домен</th> -->
+                    <th style="width: 15%">Значении</th>
+                  </tr>
+                <tbody>
+                  <tr *ngFor="let item of panel.values;let i = index" class="text-peimary">
+                    <td>{{item.paramName}}</td>
+                    <!-- <td>{{item.paramSubDomain}}</td> -->
+                    <td>{{item.params}}</td>
+                  </tr>
+                </tbody>
+              </p>
+            </nz-collapse-panel>
+          </nz-collapse>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #greenBlock>
+  <a class="intro-banner-vdo-play-btn greenBg" target="_blank">
+    <i class="glyphicon glyphicon-play whiteText" aria-hidden="true"></i>
+    <span class="ripple greenBg"></span>
+    <span class="ripple greenBg"></span>
+    <span class="ripple greenBg"></span>
+  </a>
+</ng-template>
+<ng-template #pinkBlock>
+  <a class="intro-banner-vdo-play-btn pinkBg" target="_blank">
+    <i class="glyphicon glyphicon-play whiteText" aria-hidden="true"></i>
+    <span class="ripple pinkBg"></span>
+    <span class="ripple pinkBg"></span>
+    <span class="ripple pinkBg"></span>
+  </a>
+</ng-template>

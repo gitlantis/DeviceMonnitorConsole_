@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeviceMonnitorAPI", "DeviceMonnitorAPI\DeviceMonnitorAPI.csproj", "{16770232-08A5-4DA9-9480-2E0089648D2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "softHardwareAdmin", "..\softHardwareAdmin\softHardwareAdmin.csproj", "{0E3E0BE9-46D3-4AD8-A9A7-63EBB16F18F4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeviceMonnitorFront", "..\DeviceMonnitorFront\DeviceMonnitorFront.csproj", "{FEF2DB74-2189-47B5-888B-215C1EBF8C19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetwayAndAPI", "..\GetwayAndAPI\GetwayAndAPI\GetwayAndAPI.csproj", "{C33C28F9-08E3-496B-BCC4-F657456A35F2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FirebaseProxy", "..\FirebaseProxy\FirebaseProxy.csproj", "{765D6D9C-36F9-4355-BF31-0E05D0A41E43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GateWaySIM800", "..\GateWaySIM800\GateWaySIM800.csproj", "{530B9E65-B08A-404F-9521-F61F63C9FB63}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{16770232-08A5-4DA9-9480-2E0089648D2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16770232-08A5-4DA9-9480-2E0089648D2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16770232-08A5-4DA9-9480-2E0089648D2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16770232-08A5-4DA9-9480-2E0089648D2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E3E0BE9-46D3-4AD8-A9A7-63EBB16F18F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E3E0BE9-46D3-4AD8-A9A7-63EBB16F18F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E3E0BE9-46D3-4AD8-A9A7-63EBB16F18F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E3E0BE9-46D3-4AD8-A9A7-63EBB16F18F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEF2DB74-2189-47B5-888B-215C1EBF8C19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEF2DB74-2189-47B5-888B-215C1EBF8C19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEF2DB74-2189-47B5-888B-215C1EBF8C19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEF2DB74-2189-47B5-888B-215C1EBF8C19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C33C28F9-08E3-496B-BCC4-F657456A35F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C33C28F9-08E3-496B-BCC4-F657456A35F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C33C28F9-08E3-496B-BCC4-F657456A35F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C33C28F9-08E3-496B-BCC4-F657456A35F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{765D6D9C-36F9-4355-BF31-0E05D0A41E43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{765D6D9C-36F9-4355-BF31-0E05D0A41E43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{765D6D9C-36F9-4355-BF31-0E05D0A41E43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{765D6D9C-36F9-4355-BF31-0E05D0A41E43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{530B9E65-B08A-404F-9521-F61F63C9FB63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{530B9E65-B08A-404F-9521-F61F63C9FB63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{530B9E65-B08A-404F-9521-F61F63C9FB63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{530B9E65-B08A-404F-9521-F61F63C9FB63}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1FBF63D1-DF7B-45DC-A5E0-58C81FF88E2D}
+	EndGlobalSection
+EndGlobal

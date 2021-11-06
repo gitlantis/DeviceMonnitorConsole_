@@ -26,8 +26,8 @@ namespace GateWaySIM800
         private IFirebaseClient client;
         private readonly IFirebaseConfig fbc = new FirebaseConfig()
         {
-            AuthSecret = "CZPfXMxEIxkOhl41yzZREI890Uu2HMnYrOM0JCTB",        //"OA4QKAKnS5wwys2hLMz47QIwutkh1x0UYT1Gc8RY",
-            BasePath = "https://testbase-bcc86-default-rtdb.firebaseio.com/"//"https://devconsole-f3fdb-default-rtdb.firebaseio.com/"
+            AuthSecret = "",
+            BasePath = ""
         };
 
         public Form1()

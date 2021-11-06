@@ -20,8 +20,8 @@ namespace FirebaseProxy.Controllers
         private readonly ILogger<GetwayController> _logger;
         private readonly IFirebaseConfig fbc = new FirebaseConfig()
         {
-            AuthSecret = "043adAn87dLdvPfkFlgVPBUhSR2roeqLyftAwB5C",//"OA4QKAKnS5wwys2hLMz47QIwutkh1x0UYT1Gc8RY",
-            BasePath = "https://mytestproj-1fda7.firebaseio.com/"//"https://devconsole-f3fdb-default-rtdb.firebaseio.com/"
+            AuthSecret = "",
+            BasePath = ""
         };
 
         private IFirebaseClient client;

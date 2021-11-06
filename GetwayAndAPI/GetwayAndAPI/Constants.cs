@@ -10,8 +10,8 @@ namespace GetwayAndAPI
     {
         public static readonly string BasURL = "http://api.leds.uz/api/";
         //public static readonly string BasURL = "http://api.leds.uz/api/";
-        public static readonly string ApiUser = "apiadmin";
-        public static readonly string ApiPass = "@p!Adm!n21U$er00222";
+        public static readonly string ApiUser = "";
+        public static readonly string ApiPass = "";
         public static readonly string ChipFile = "auth.chip";
     }
 }

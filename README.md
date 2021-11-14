@@ -4,6 +4,8 @@ This project developed purpose of controlling water and oil pumps remotely in sh
 
 Project developed using .Net core 5, Angular 12 and MySQL.
 
+System accepts dynamic parameters which configured for every device individually.
+
 ## Web view
 Developed system saves parameters dynamically operators can integrate it to any system.
 

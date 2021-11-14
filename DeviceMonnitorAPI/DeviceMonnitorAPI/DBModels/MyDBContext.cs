@@ -36,8 +36,8 @@ namespace DeviceMonnitorAPI.DBModels
             // Configure Primary Keys  
             modelBuilder.Entity<User>().HasKey(u => u.UserGuid).HasName("PK_Users");
             modelBuilder.Entity<User>().HasData(
-                new User {UserGuid=Guid.NewGuid(), FirstName = "Api", LastName = "Admin", Username = "apiadmin", Password = "@p!Adm!n21U$er00222", IsActive = true, Role = "ApiAdmin", CreatedDate = DateTime.Now },
-                new User { UserGuid = Guid.NewGuid(), FirstName = "Admin", LastName = "User", Username = "admin", Password = "@@dm!nU$er", IsActive = true, Role = "Admin", CreatedDate = DateTime.Now }
+                new User {UserGuid=Guid.NewGuid(), FirstName = "Api", LastName = "Admin", Username = "apiadmin", Password = "xxxxx", IsActive = true, Role = "ApiAdmin", CreatedDate = DateTime.Now },
+                new User { UserGuid = Guid.NewGuid(), FirstName = "Admin", LastName = "User", Username = "admin", Password = "xxxxxx", IsActive = true, Role = "Admin", CreatedDate = DateTime.Now }
                 );
 
             // Map entities to tables  
